@@ -1,5 +1,8 @@
-{ hyprspace, system, ...}:
+{ hyprspace, system, pkgs, ... }:
 {
+    services.dunst = {
+        enable = true;
+    };
     xdg.configFile."hypr" = {
         source = ../../config/hypr;
         recursive = true;
