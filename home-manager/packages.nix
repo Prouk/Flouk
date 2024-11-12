@@ -9,7 +9,7 @@
         kitty
         playerctl
         pwvucontrol
-        rofi
+        wofi
         vesktop
         waybar
         wev

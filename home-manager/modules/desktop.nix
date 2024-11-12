@@ -12,8 +12,8 @@
             hyprspace.packages.${system}.Hyprspace
         ];
     };
-    xdg.configFile."rofi" = {
-        source = ../../config/rofi;
+    xdg.configFile."wofi" = {
+        source = ../../config/wofi;
         recursive = true;
     };
 }

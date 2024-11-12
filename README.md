@@ -3,6 +3,8 @@
 
 Flouk is my default environment flake.
 
+![alt text](https://github.com/Prouk/Flouk/blob/main/screenshot.png)
+
 ## Features
 
 - NixOS / Home-manager Configs
