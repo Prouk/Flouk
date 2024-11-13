@@ -13,16 +13,12 @@
         hyprland = {
             url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
         };
-        hyprspace = {
-            url = "github:KZDKM/Hyprspace";
-            inputs.hyprland.follows = "hyprland";
-        };
         zen-browser = {
             url = "github:pfaj/zen-browser-flake";
         };
     };
 
-    outputs = inputs@{ self, home-manager, hyprland, hyprspace, nixpkgs, zen-browser, ... }:
+    outputs = inputs@{ self, home-manager, hyprland, nixpkgs, zen-browser, ... }:
         let
             hostName = "prouk";
             system = "x86_64-linux";
@@ -44,7 +40,7 @@
 
             homeConfigurations.${userName} = home-manager.lib.homeManagerConfiguration {
                 extraSpecialArgs = {
-                    inherit hostName hyprland hyprspace pkgs system userName zen-browser;
+                    inherit hostName hyprland pkgs system userName zen-browser;
                 };
                 pkgs = nixpkgs.legacyPackages.${system};
                 modules = [

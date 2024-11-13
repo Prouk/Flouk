@@ -34,7 +34,7 @@ echo -e "
 ${YELLOW}▐▀▀▀▀▀▌
 ${YELLOW}▐     ▌
 ${YELLOW}▐  _  ▌${RED} Disclaimer :
-${YELLOW}▐ | | ▌${RED} This flake is made by just for fun.
+${YELLOW}▐ | | ▌${RED} This flake is made by me just for fun.
 ${YELLOW}▐ | | ▌${RED} Under no circumstances should you blindly trust something made by a random internet dude.
 ${YELLOW}▐ |_| ▌${RED} (even tho i tried to make things correctly).
 ${YELLOW}▐  _  ▌${RED} As this flake was made on my system, you'll have to modify the hyprland conf AND THE HARDWARE-CONFIGURATION FILE.

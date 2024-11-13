@@ -1,6 +1,7 @@
 { pkgs, system, zen-browser, ... }:
 {
     home.packages = with pkgs; [
+        ags
         alsa-scarlett-gui
         btop
         fastfetch

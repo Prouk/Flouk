@@ -21,4 +21,9 @@
         package = pkgs.vimix-cursor-theme;
         size = 32;
     };
+
+    xdg.configFile."vesktop/themes/" = {
+        source = ../../config/vesktop/themes;
+        recursive = true;
+    };
 }
