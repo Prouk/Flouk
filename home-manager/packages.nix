@@ -1,21 +1,28 @@
 { pkgs, system, zen-browser, ... }:
 {
     home.packages = with pkgs; [
-        ags
         alsa-scarlett-gui
         btop
         fastfetch
+        fragments
+        heroic
         hyprpaper
         hyprshot
         kitty
+        mpv
+        nerd-fonts.symbols-only
+        nerd-fonts.zed-mono
+        onlyoffice-bin
         playerctl
         pwvucontrol
-        wofi
+        scrcpy
+        unzip
         vesktop
-        waybar
-        wev
+        wofi
         xfce.thunar
+        xfce.thunar-volman
         zed-editor
         zen-browser.packages.${system}.generic
+        zip
     ];
 }

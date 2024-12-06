@@ -2,7 +2,8 @@
     imports = [
         ./console.nix
         ./desktop.nix
-        ./lsp.nix
+        ./languageServers.nix
+        ./peripherals.nix
         ./theme.nix
     ];
 }

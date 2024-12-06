@@ -22,6 +22,8 @@
         size = 32;
     };
 
+    fonts.fontconfig.enable = true;
+
     xdg.configFile."vesktop/themes/" = {
         source = ../../config/vesktop/themes;
         recursive = true;

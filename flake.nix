@@ -3,22 +3,19 @@
     description = "Flouk is my main desktop system flake";
 
     inputs = {
+        ags.url = "github:aylur/ags";
         nixpkgs = {
             url = "github:nixos/nixpkgs/nixos-unstable";
         };
-        home-manager-unstable = {
+        home-manager = {
             url = "github:nix-community/home-manager";
             inputs.nixpkgs.follows = "nixpkgs";
         };
-        hyprland = {
-            url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-        };
-        zen-browser = {
-            url = "github:pfaj/zen-browser-flake";
-        };
+        hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+        zen-browser.url = "github:pfaj/zen-browser-flake";
     };
 
-    outputs = inputs@{ self, home-manager, hyprland, nixpkgs, zen-browser, ... }:
+    outputs = inputs@{ self, ags, home-manager, hyprland, nixpkgs, zen-browser, ... }:
         let
             hostName = "prouk";
             system = "x86_64-linux";
@@ -26,6 +23,15 @@
             pkgs = import nixpkgs {
                 inherit system;
                 config.allowUnfree = true;
+                overlays = [
+                    (final: prev:
+                        {
+                            ags = prev.ags.overrideAttrs (old: {
+                                buildInputs = old.buildInputs ++ [ pkgs.libdbusmenu-gtk3 ];
+                            });
+                        }
+                    )
+                ];
             };
         in
         {
@@ -40,7 +46,7 @@
 
             homeConfigurations.${userName} = home-manager.lib.homeManagerConfiguration {
                 extraSpecialArgs = {
-                    inherit hostName hyprland pkgs system userName zen-browser;
+                    inherit ags hostName hyprland pkgs system userName zen-browser;
                 };
                 pkgs = nixpkgs.legacyPackages.${system};
                 modules = [

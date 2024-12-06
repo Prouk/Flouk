@@ -18,13 +18,16 @@ Flouk is my default environment flake.
     - [x]  Hyprland Config
     - [x]  Hyprpaper
     - [x]  Basic Kitty
-    - [x]  Rofi
+    - [ ]  Wofi
     - [x]  GTK Theme
     - [ ]  Dunst
+    - [ ]  AGS
 - [ ]  To be determined ...
 ## Usage/Examples
 
 Dont' forget to edit the host / username in the flake.nix then the hardware-configuration.nix and disk.nix to match your setup.
+
+You'll also need to edit some of the files in config to match what you want.
 
 Then, run the flouk.sh file:
 
