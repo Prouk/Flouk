@@ -1,0 +1,4 @@
+{ pkgs, ... }:
+{
+  home.pakcages = pkgs
+}

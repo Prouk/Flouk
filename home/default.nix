@@ -1,6 +1,8 @@
 { ... }:
 {
-  import = [
-    ./modules/home.nix
+  imports = [
+    ./home.nix
+    ./modules/gaming.nix
+    ./modules/terminal.nix
   ];
 }

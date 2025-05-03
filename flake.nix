@@ -27,7 +27,7 @@
     ...
   } @ inputs:
   let
-    pgks = nixpkgs.legacyPackages."${user.system}";
+    pgks = nixpkgs.legacyPackages.${user.system};
     user = {
       hostname = "prouk";
       name = "prouk";
@@ -36,13 +36,14 @@
   in
   {
     nixosConfigurations = {
-      "${user.hostname}" = nixpkgs.lib.nixosSystem {
+      ${user.hostname} = nixpkgs.lib.nixosSystem {
         modules = [
             ./system
             home-manager.nixosModules.home-manager{
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users."${user.name}" = import ./home;
+              home-manager.users.${user.name} = ./home/default.nix;
+              home-manager.extraSpecialArgs = { inherit pgks hyprland user; };
             }
         ];
         specialArgs = { inherit pgks hyprland user; };
