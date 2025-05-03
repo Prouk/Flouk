@@ -2,6 +2,7 @@
 {
   imports = [
     ./home.nix
+    ./config.nix
     ./modules/gaming.nix
     ./modules/terminal.nix
   ];
