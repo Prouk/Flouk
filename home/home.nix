@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  home.pakcages = pkgs
+  home.stateVersion = "24.11";
 }

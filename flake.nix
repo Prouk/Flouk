@@ -43,7 +43,7 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
               home-manager.users.${user.name} = ./home/default.nix;
-              home-manager.extraSpecialArgs = { inherit pgks hyprland user; };
+              home-manager.extraSpecialArgs = { inherit pgks hyprland user zen-browser; };
             }
         ];
         specialArgs = { inherit pgks hyprland user; };
