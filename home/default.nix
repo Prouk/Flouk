@@ -1,0 +1,6 @@
+{ ... }:
+{
+  import = [
+    ./modules/home.nix
+  ];
+}

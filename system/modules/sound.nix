@@ -1,4 +1,4 @@
-{ nixpkgs, ... }:
+{ pgks, ... }:
 {
   security.rtkit.enable = true;
   services.pipewire = {
@@ -8,7 +8,7 @@
     pulse.enable = true;
   };
 
-  environment.systemPackages = with nixpkgs; [
+  environment.systemPackages = with pgks; [
     pwvucontrol
   ];
 }
