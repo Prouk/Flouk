@@ -17,7 +17,7 @@
     nixosConfigurations.prouk = nixpkgs.lib.nixosSystem {
       inherit system;
       modules = [
-        /etc/nixos/configuration.nix
+        ./system/default.nix
       ];
     };
   };
