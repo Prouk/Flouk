@@ -1,2 +1,2 @@
-echo "Testing flake"
+echo "Testing flake ..."
 nix flake check ./ --no-build

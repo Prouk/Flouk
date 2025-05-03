@@ -1,4 +1,4 @@
-{ ... }:
+{ nixpkgs, ... }:
 {
   security.rtkit.enable = true;
   services.pipewire = {
@@ -7,7 +7,8 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  environment.systemPackages = with nixpkgs [
+
+  environment.systemPackages = with nixpkgs; [
     pwvucontrol
   ];
 }

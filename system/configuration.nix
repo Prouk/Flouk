@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ nixpkgs, ... }:
 
 {
   imports =
@@ -10,7 +10,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 5;
-  boot.kernelPackages = pkgs.linuxKernel.packages.linux_xanmod_latest;
+  boot.kernelPackages = nixpkgs.linuxKernel.kernels.linux_xanmod_latest;
   networking.hostName = "prouk";
   nix.settings.auto-optimise-store = true;
 
@@ -45,7 +45,6 @@
     isNormalUser = true;
     description = "prouk";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
   };
 
   # Allow unfree packages
