@@ -9,9 +9,13 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, ... }: {
-    nixosConfigurations.prouk = {
-      system = "x86_64-linux";
+  outputs = { self, nixpkgs, ... }@inputs:
+  let
+    system = "x86_64-linux";
+  in
+  {
+    nixosConfigurations.prouk = nixpkgs.lib.nixosSystem {
+      inherit system;
       modules = [
         /etc/nixos/configuration.nix
       ];
