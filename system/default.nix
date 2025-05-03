@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./system/configuration.nix
+    ./configuration.nix
     ./modules
   ];
 }
