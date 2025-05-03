@@ -1,7 +1,8 @@
 { ... }:
 {
   imports = [
-    ./configuration.nix
+    ./config.nix
+    ./home.nix
     ./modules
   ];
 }

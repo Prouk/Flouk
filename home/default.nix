@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     ags
     android-tools
+    nano
     rofi-wayland
     swww
     vesktop
