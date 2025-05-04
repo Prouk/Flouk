@@ -21,5 +21,7 @@
     "locale",
     "break",
   ],
-  "logo": "./logo.png",
+  "logo": {
+    "source": "~/.config/fastfetch/logo.png",
+  },
 }
