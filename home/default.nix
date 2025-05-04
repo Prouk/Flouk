@@ -10,6 +10,7 @@
   home.packages = with pkgs; [
     ags
     android-tools
+    kitty
     nano
     rofi-wayland
     swww
