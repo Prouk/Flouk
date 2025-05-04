@@ -7,6 +7,7 @@
     ./greeter.nix
     ./locale.nix
     ./networking.nix
+    ./nvidia.nix
     ./sound.nix
     ./users.nix
   ];
