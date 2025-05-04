@@ -18,9 +18,8 @@
     "cpu",
     "gpu",
     "memory",
-    "disk",
-    "localip",
     "locale",
     "break",
   ],
+  "logo": "./logo.png",
 }
