@@ -1,11 +1,9 @@
-{ ... }:
+{ user, pkgs, ... }:
 {
-  programs.fish = {
-    enable = true;
-  };
 
   home.shell.enableFishIntegration = true;
 
+  programs.fish.enable = true;
   programs.kitty = {
     enable = true;
     shellIntegration.enableFishIntegration = true;

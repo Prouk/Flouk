@@ -16,4 +16,6 @@
     git
     tree
   ];
+  programs.fish.enable = true;
+
 }

@@ -14,6 +14,7 @@
     rofi-wayland
     swww
     vesktop
+    wev
     zen-browser.packages.${user.system}.twilight
     zed-editor
   ];
