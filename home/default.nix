@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     ags
     android-tools
+    hyprshot
     kitty
     nano
     rofi-wayland
