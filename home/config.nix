@@ -1,9 +1,4 @@
 { ... }:
 {
-  xdg.enable = true;
-  xdg.configFile."hypr" = {
-    enable = true;
-    source = "./hypr";
-    recursive = true;
-  };
+  home.file.".config/hypr".source = config/hypr;
 }
