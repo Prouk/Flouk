@@ -8,6 +8,7 @@
     ./locale.nix
     ./networking.nix
     ./nvidia.nix
+    ./shell.nix
     ./sound.nix
     ./users.nix
   ];

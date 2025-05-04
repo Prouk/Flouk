@@ -13,6 +13,7 @@
     nano
     rofi-wayland
     swww
+    xfce.thunar
     vesktop
     wev
     zen-browser.packages.${user.system}.twilight
