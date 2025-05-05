@@ -3,7 +3,7 @@
   imports = [
     ./home.nix
     ./config.nix
-    ./modules/gaming.nix
+    ./modules/theme.nix
   ];
 
   home.packages = with pkgs; [
