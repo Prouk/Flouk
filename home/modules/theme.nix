@@ -9,4 +9,8 @@
     size = 24;
     hyprcursor.size = 24;
   };
+  gtk.theme = {
+    package = pkgs.graphite-gtk-theme;
+    name = "Graphite-Nord-Black";
+  };
 }
