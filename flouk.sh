@@ -33,26 +33,31 @@ choices="Choose what you want to do:
 install_flake() {
     clear
     echo "Installing flake..."
-    sudo nixos-rebuild switch --flake ./
+    echo -e "${color[red]}From here, it is assumed that you have already installed NixOS and have a working NixOS configuration.
+    You MUST also have replaced the included configuration.nix and hardware-configuration.nix with your own.${color[reset]}"
+    sudo nixos-rebuild switch --flake ./ && hyprctl reload
 }
 
 update_flake() {
     clear
     echo "Updating flake..."
-    sudo nix flake update
+    nix flake update
 }
 
 collect_garbage() {
     clear
     echo "Cleaning generations..."
-    sudo nixos-collect-garbage -d +2
+    nix-env --delete-generations +2
+    sudo nix-env --delete-generations +2
+    nix-store --gc
+    sudo nix-store --gc
 }
 
 menu() {
     clear
-    echo "$1"
     echo -e "$logo"
     echo -e "$choices"
+    echo "$1"
     read user_choice
     case $user_choice in
         "") install_flake ;;
@@ -62,6 +67,7 @@ menu() {
         4) echo "Have a nice day" && exit ;;
         *) menu "Invalid choice" ;;
     esac
+    exit
 }
 
 menu
