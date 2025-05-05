@@ -9,6 +9,7 @@
   home.packages = with pkgs; [
     ags
     android-tools
+    btop
     hyprshot
     kitty
     nano
