@@ -13,12 +13,15 @@
     hyprshot
     kitty
     nano
+    rar
     rofi-wayland
     swww
+    unzip
     xfce.thunar
     vesktop
     wev
     zen-browser.packages.${user.system}.twilight
     zed-editor
+    zip
   ];
 }

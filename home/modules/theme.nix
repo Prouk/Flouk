@@ -4,10 +4,9 @@
     enable = true;
     gtk.enable = true;
     x11.enable = true;
-    hyprcursor.enable = true;
     package = pkgs.google-cursor;
-    name = "GoogleDot-white";
-    size = 12;
-    hyprcursor.size = 12;
+    name = "GoogleDot-White";
+    size = 24;
+    hyprcursor.size = 24;
   };
 }
