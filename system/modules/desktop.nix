@@ -1,4 +1,4 @@
-{ hyprland, user, ... }:
+{ hyprland, pkgs, user, ... }:
 {
   programs.hyprland = {
     enable = true;

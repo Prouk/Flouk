@@ -13,6 +13,7 @@
     btop
     hyprshot
     kitty
+    mako
     nano
     rar
     rofi-wayland
