@@ -5,6 +5,7 @@
     ./config.nix
     ./modules/gaming.nix
     ./modules/theme.nix
+    ./modules/video.nix
   ];
 
   home.packages = with pkgs; [
