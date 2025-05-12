@@ -17,13 +17,14 @@
     nano
     nerd-fonts.symbols-only
     rar
-    rofi-wayland
+    rofi-wayland-unwrapped
     swww
     unzip
-    xfce.thunar
+    # xfce.thunar
     vesktop
     waybar
     wev
+    yazi-unwrapped
     zen-browser.packages.${user.system}.twilight
     zed-editor
     zip
