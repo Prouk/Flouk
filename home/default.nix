@@ -9,7 +9,6 @@
   ];
 
   home.packages = with pkgs; [
-    ags
     android-tools
     btop
     hyprshot
@@ -22,6 +21,7 @@
     unzip
     xfce.thunar
     vesktop
+    waybar
     wev
     zen-browser.packages.${user.system}.twilight
     zed-editor
