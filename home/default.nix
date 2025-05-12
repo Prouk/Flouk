@@ -15,6 +15,7 @@
     kitty
     mako
     nano
+    nerd-fonts.symbols-only
     rar
     rofi-wayland
     swww
