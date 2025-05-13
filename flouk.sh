@@ -51,7 +51,7 @@ collect_garbage() {
     sudo nix-env --delete-generations +2
     nix-store --gc
     sudo nix-store --gc
-    sudo nixos-rebuild switch --flake ./
+    sudo nixos-rebuild switch --flake ./ --accept-flake-config
 }
 
 menu() {

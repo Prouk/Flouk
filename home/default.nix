@@ -11,6 +11,7 @@
   home.packages = with pkgs; [
     android-tools
     btop
+    file
     hyprshot
     kitty
     mako
