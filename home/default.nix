@@ -17,10 +17,9 @@
     mako
     nano
     nerd-fonts.symbols-only
-    rar
+    p7zip
     rofi-wayland-unwrapped
     swww
-    unzip
     # xfce.thunar
     vesktop
     waybar
@@ -28,6 +27,5 @@
     yazi-unwrapped
     zen-browser.packages.${user.system}.twilight
     zed-editor
-    zip
   ];
 }
