@@ -18,7 +18,7 @@
       fsType = "ext4";
     };
 
-  fileSystems."/nvme" =
+  fileSystems."/home/prouk/nvme" =
     { device = "/dev/disk/by-uuid/ec5f348b-1f1f-45b6-8f04-5f052b46cfb9";
       fsType = "ext4";
     };
