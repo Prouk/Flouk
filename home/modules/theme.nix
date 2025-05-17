@@ -2,8 +2,8 @@
 {
   home.pointerCursor = {
     enable = true;
-    package = pkgs.google-cursor;
-    name = "GoogleDot-White";
+    package = pkgs.phinger-cursors;
+    name = "phinger-cursors-dark";
     size = 24;
   };
 
@@ -15,7 +15,7 @@
 
     };
     cursorTheme = {
-      name = "GoogleDot-White";
+      name = "phinger-cursors-dark";
     };
     iconTheme = {
       package = pkgs.nordzy-icon-theme;

@@ -1,87 +1,29 @@
-* {
-    font-family: "JetBrainsMono Nerd Font, monospace, sans-serif";
-    font-weight: bold;
-    font-size: 16px;
+window {
+    background-color: transparent;
 }
 
-window#waybar {
+window > box > box {
+    padding: 5px 10px;
+}
+
+window > box > box {
     border-radius: 7px;
-    background: transparent;
-    color: #93b1a6;
+    background: #828282;
+    background: linear-gradient(
+        41deg,
+        rgba(130, 130, 130, 0.65) 0%,
+        rgba(89, 89, 89, 0.65) 18%,
+        rgba(84, 84, 84, 0.65) 28%,
+        rgba(133, 133, 133, 0.65) 56%,
+        rgba(74, 74, 74, 0.65) 81%,
+        rgba(115, 115, 115, 0.65) 100%
+    );
 }
 
-tooltip {
-    background: #0d1117;
-    border-radius: 7px;
-    border: 1px solid #21262d;
+widget > * {
+    margin: 0 5px;
 }
 
-tooltip label {
-    color: #93b1a6;
-}
-
-#launcherButton {
+#custom-launcherButton {
     font-size: 1.5em;
-    border-radius: 7px 7px 7px 7px;
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-#workspaces {
-    border-radius: 7px 7px 7px 7px;
-    margin: 0;
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-#workspaces button {
-    min-width: 28px;
-    border-radius: 7px;
-    margin: 8px 0;
-}
-
-#workspaces button:not(:last-child) {
-    margin-right: 4px;
-}
-
-#workspaces button:hover {
-    background: rgba(255, 255, 255, 0.08);
-}
-
-#workspaces button.active,
-#workspaces button.active:hover {
-    background: #5c8374;
-    color: #0d1117;
-}
-
-#clock,
-#pulseaudio,
-#network,
-#workspaces #launcherButton {
-    padding: 0px 14px;
-    background-color: rgba(255, 255, 255, 0.08);
-}
-
-#tray {
-    padding: 0px 16px;
-}
-
-#network {
-    border-radius: 7px 0 0 7px;
-    padding-left: 24px;
-}
-
-#battery.warning {
-    color: orange;
-}
-
-#battery.critical {
-    color: red;
-}
-
-#temperature.critical {
-    color: red;
-}
-
-#clock {
-    padding-right: 16px;
-    border-radius: 0 7px 7px 0;
 }

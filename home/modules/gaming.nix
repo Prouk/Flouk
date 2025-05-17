@@ -1,6 +1,12 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    lutris-unwrapped
+    lutris
+    protontricks
+    protonup
+    umu-launcher
+    vulkan-loader
+    vulkan-tools
+    winetricks
   ];
 }

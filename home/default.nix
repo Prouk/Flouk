@@ -9,22 +9,24 @@
   ];
 
   home.packages = with pkgs; [
+    adwaita-icon-theme
     android-tools
     btop
+    dunst
     file
+    fragments
     hyprshot
     kitty
-    mako
     nano
     nerd-fonts.symbols-only
-    p7zip
-    rofi-wayland-unwrapped
+    p7zip-rar
+    rofi-wayland
     swww
     # xfce.thunar
     vesktop
     waybar
     wev
-    yazi-unwrapped
+    yazi
     zen-browser.packages.${user.system}.twilight
     zed-editor
   ];
