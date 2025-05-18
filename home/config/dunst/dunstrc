@@ -55,19 +55,19 @@
 
 
 [urgency_low]
-    background = "#4848480d"
+    background = "#4848487d"
     foreground = "#cdd6f4"
     highlight = "#cba6f7"
     timeout = 4
 
 [urgency_normal]
-    background = "#4848480d"
+    background = "#4848487d"
     foreground = "#cdd6f4"
     highlight = "#cba6f7"
     timeout = 6
 
 [urgency_critical]
-    background = "#4848480d"
+    background = "#4848487d"
     foreground = "#cdd6f4"
     highlight = "#cba6f7"
     timeout = 0
