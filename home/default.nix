@@ -13,7 +13,6 @@
     alsa-scarlett-gui
     android-tools
     btop
-    chromium
     dunst
     file
     fragments
