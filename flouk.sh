@@ -47,10 +47,8 @@ update_flake() {
 collect_garbage() {
     clear
     echo "Cleaning generations..."
-    nix-env --delete-generations +2
-    sudo nix-env --delete-generations +2
-    nix-store --gc
-    sudo nix-store --gc
+    sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
+    sudo nix-collect-garbage
     sudo nixos-rebuild switch --flake ./ --accept-flake-config
 }
 

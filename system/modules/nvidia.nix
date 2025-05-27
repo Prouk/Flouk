@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 {
 
+  boot.blacklistedKernelModules = [ "nouveau" ];
+
   hardware.graphics = {
       enable = true;
       enable32Bit = true;
@@ -22,6 +24,7 @@
   environment.systemPackages = with pkgs; [
     ffmpeg-full
     nvtopPackages.nvidia
+    glxinfo
   ];
 
   services.xserver.videoDrivers = ["nvidia"];

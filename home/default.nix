@@ -10,8 +10,10 @@
 
   home.packages = with pkgs; [
     adwaita-icon-theme
+    alsa-scarlett-gui
     android-tools
     btop
+    chromium
     dunst
     file
     fragments
@@ -27,7 +29,7 @@
     waybar
     wev
     yazi
-    zen-browser.packages.${user.system}.twilight
+    zen-browser.packages.${user.system}.default
     zed-editor
   ];
 }
