@@ -25,6 +25,10 @@
     hyprland = {
       url = "github:hyprwm/Hyprland";
     };
+    swww = {
+      url = "github:LGFae/swww";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,6 +40,7 @@
     home-manager,
     hyprland,
     nixpkgs,
+    swww,
     zen-browser,
     ...
   } @ inputs:
@@ -59,12 +64,13 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.users.${user.name} = ./home/default.nix;
-            home-manager.extraSpecialArgs = { inherit pgks hyprland user zen-browser; };
+            home-manager.extraSpecialArgs = { inherit pgks hyprland swww user zen-browser; };
           }
         ];
         specialArgs = { inherit pgks hyprland user; };
         system = user.system;
       };
     };
+    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixfmt-rfc-style;
   };
 }

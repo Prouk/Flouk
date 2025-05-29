@@ -1,4 +1,4 @@
-{ pkgs, zen-browser, user, ... }:
+{ pkgs, swww, zen-browser, user, ... }:
 {
   imports = [
     ./home.nix
@@ -22,7 +22,7 @@
     nerd-fonts.symbols-only
     p7zip-rar
     rofi-wayland
-    swww
+    swww.packages.${user.system}.swww
     # xfce.thunar
     vesktop
     waybar
