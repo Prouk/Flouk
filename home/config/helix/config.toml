@@ -1,0 +1,4 @@
+theme = "kdt"
+
+[editor.file-picker]
+hidden = false

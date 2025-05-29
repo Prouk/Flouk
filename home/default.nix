@@ -16,6 +16,7 @@
     dunst
     file
     fragments
+    helix
     hyprshot
     kitty
     nano
