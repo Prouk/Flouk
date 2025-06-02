@@ -3,7 +3,7 @@
   imports = [
     ./home.nix
     ./config.nix
-    ./modules/fileExplore.nix
+    ./modules/fileExplorer.nix
     ./modules/gaming.nix
     ./modules/shell.nix
     ./modules/theme.nix
