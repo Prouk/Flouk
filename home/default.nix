@@ -3,6 +3,7 @@
   imports = [
     ./home.nix
     ./config.nix
+    ./modules/fileExplore.nix
     ./modules/gaming.nix
     ./modules/shell.nix
     ./modules/theme.nix
@@ -29,7 +30,6 @@
     vesktop
     waybar
     wev
-    yazi
     zen-browser.packages.${user.system}.default
     zed-editor
   ];
