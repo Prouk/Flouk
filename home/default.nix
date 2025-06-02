@@ -3,11 +3,11 @@
   imports = [
     ./home.nix
     ./config.nix
+    ./modules/file.nix
     ./modules/gaming.nix
     ./modules/shell.nix
     ./modules/theme.nix
     ./modules/video.nix
-    ./modules/yazi.nix
   ];
 
   home.packages = with pkgs; [
