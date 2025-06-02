@@ -1,6 +1,7 @@
 {
   description = "Flouk flake, minimalist and easy on the eyes NixOS config";
 
+  # Disabled caching due to problem with hardware acceleration on some already builded packages
   nixConfig = {
     substituters = [
       "https://cache.nixos.org"
@@ -23,7 +24,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      url = "github:hyprwm/Hyprland";
+      # github:hyprwm/Hyprland";
+      url = "git+https://github.com/hyprwm/Hyprland";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
     swww = {
       url = "github:LGFae/swww";

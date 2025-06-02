@@ -4,6 +4,7 @@
     ./home.nix
     ./config.nix
     ./modules/gaming.nix
+    ./modules/shell.nix
     ./modules/theme.nix
     ./modules/video.nix
   ];
