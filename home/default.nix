@@ -3,6 +3,7 @@
   imports = [
     ./home.nix
     ./config.nix
+    ./modules/dev.nix
     ./modules/file.nix
     ./modules/gaming.nix
     ./modules/shell.nix

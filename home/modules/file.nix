@@ -12,11 +12,17 @@
     };
   };
 
+  home.sessionVariables.TERMCMD = "kitty --class=file_chooser";
+
   xdg.portal = {
     enable = true;
     extraPortals = with pkgs; [
       xdg-desktop-portal-termfilechooser
     ];
+  };
+
+  xdg.portal.config.common = {
+    "org.freedesktop.impl.portal.FileChooser" = "termfilechooser";
   };
 
   xdg.configFile."xdg-desktop-portal-termfilechooser/config" = {
