@@ -8,8 +8,8 @@
       };
     };
     displayManager.sddm = {
-        enable = true;
-        wayland.enable = true;
+      enable = true;
+      wayland.enable = true;
     };
   };
 }

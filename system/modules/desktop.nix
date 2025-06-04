@@ -1,7 +1,11 @@
-{ hyprland, pkgs, user, ... }:
+{
+  hyprland,
+  user,
+  ...
+}:
 {
   environment.variables = {
-    NIXOS_OZONE_WL=1;
+    NIXOS_OZONE_WL = 1;
   };
 
   programs.hyprland = {

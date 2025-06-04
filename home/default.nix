@@ -1,4 +1,10 @@
-{ pkgs, swww, zen-browser, user, ... }:
+{
+  pkgs-unst,
+  swww,
+  zen-browser,
+  user,
+  ...
+}:
 {
   imports = [
     ./home.nix
@@ -11,7 +17,7 @@
     ./modules/video.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs-unst; [
     adwaita-icon-theme
     alsa-scarlett-gui
     android-tools

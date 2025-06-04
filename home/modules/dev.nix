@@ -1,8 +1,8 @@
-{ pkgs, ... }:
+{ ... }:
 {
-  programs.direnv {
+  programs.direnv = {
     enable = true;
-    enableZshZshIntegration = true;
+    enableZshIntegration = true;
     nix-direnv.enable = true;
   };
 }

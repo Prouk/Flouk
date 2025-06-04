@@ -1,3 +1,4 @@
+#!/bin/sh
 declare -A color
 
 color["red"]="\033[0;31m"
