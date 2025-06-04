@@ -1,8 +1,8 @@
-{ pkgs-unst, ... }:
+{ pkgsunst, ... }:
 {
   home.pointerCursor = {
     enable = true;
-    package = pkgs-unst.phinger-cursors;
+    package = pkgsunst.phinger-cursors;
     name = "phinger-cursors-dark";
     size = 26;
   };
@@ -10,14 +10,14 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs-unst.graphite-gtk-theme;
+      package = pkgsunst.graphite-gtk-theme;
       name = "Graphite-Dark";
     };
     cursorTheme = {
       name = "phinger-cursors-dark";
     };
     iconTheme = {
-      package = pkgs-unst.nordzy-icon-theme;
+      package = pkgsunst.nordzy-icon-theme;
       name = "Nordzy-Dark";
     };
   };

@@ -1,6 +1,6 @@
-{ pkgs-unst, ... }:
+{ pkgsunst, ... }:
 {
-  home.packages = with pkgs-unst; [
+  home.packages = with pkgsunst; [
     lutris
     protontricks
     protonup

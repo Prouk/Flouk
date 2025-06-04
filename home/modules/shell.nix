@@ -1,13 +1,13 @@
-{ lib, pkgs-unst, ... }:
+{ lib, pkgsunst, ... }:
 {
   programs.zsh = {
     enable = true;
     initContent = lib.mkOrder 1200 "fastfetch";
     oh-my-zsh = {
       enable = true;
-      package = pkgs-unst.oh-my-zsh;
+      package = pkgsunst.oh-my-zsh;
       theme = "agnoster";
     };
-    package = pkgs-unst.zsh;
+    package = pkgsunst.zsh;
   };
 }

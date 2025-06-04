@@ -1,4 +1,4 @@
-{ pkgs-unst, ... }:
+{ pkgsunst, ... }:
 {
   security.rtkit.enable = true;
   services.pipewire = {
@@ -8,7 +8,7 @@
     pulse.enable = true;
   };
 
-  environment.systemPackages = with pkgs-unst; [
+  environment.systemPackages = with pkgsunst; [
     pwvucontrol
   ];
 }

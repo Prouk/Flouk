@@ -1,8 +1,8 @@
-{ pkgs-unst, ... }:
+{ pkgsunst, ... }:
 {
   programs.obs-studio = {
     enable = true;
-    plugins = with pkgs-unst.obs-studio-plugins; [
+    plugins = with pkgsunst.obs-studio-plugins; [
       obs-vaapi
     ];
   };

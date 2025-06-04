@@ -70,11 +70,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1749029645,
-        "narHash": "sha256-XvsmjmiOccRLuhH1lzJoF6CxLF5Hkzx5Pfdd0LwSyiA=",
+        "lastModified": 1749053399,
+        "narHash": "sha256-ddY7gpOpn6q8a7Hv2Uz6N7IDELGR9y0QyVHN8o0kOv8=",
         "owner": "cachix",
         "repo": "devenv",
-        "rev": "14f517d8831564a421499fe10df179fcaba4cc6e",
+        "rev": "6199e3a3f5b7751e23f18c670006f08c4809a27c",
         "type": "github"
       },
       "original": {
@@ -320,15 +320,15 @@
       "locked": {
         "lastModified": 1749049255,
         "narHash": "sha256-QXg2B/bF/f9IeSiZwJuhdnz2xcnpu/hDfz4eIHWVhz8=",
-        "ref": "refs/heads/main",
+        "owner": "hyprwm",
+        "repo": "Hyprland",
         "rev": "d7a87ce6e2535f1029fc93b062d2828e8549c525",
-        "revCount": 6160,
-        "type": "git",
-        "url": "https://github.com/hyprwm/Hyprland"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "https://github.com/hyprwm/Hyprland"
+        "owner": "hyprwm",
+        "repo": "Hyprland",
+        "type": "github"
       }
     },
     "hyprland-protocols": {

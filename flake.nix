@@ -29,8 +29,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     hyprland = {
-      # github:hyprwm/Hyprland";
-      url = "git+https://github.com/hyprwm/Hyprland";
+      url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     swww = {
@@ -55,7 +54,7 @@
       ...
     }@inputs:
     let
-      pkgs-unst = nixpkgs.legacyPackages.${user.system};
+      pkgsunst = nixpkgs.legacyPackages.${user.system};
       user = {
         hostname = "prouk";
         name = "prouk";
@@ -66,9 +65,6 @@
       nixosConfigurations = {
         ${user.hostname} = nixpkgs.lib.nixosSystem {
           modules = [
-            {
-              nix.settings.trusted-users = [ "${user.name}" ];
-            }
             ./system
             home-manager.nixosModules.home-manager
             {
@@ -77,7 +73,7 @@
               home-manager.users.${user.name} = ./home/default.nix;
               home-manager.extraSpecialArgs = {
                 inherit
-                  pkgs-unst
+                  pkgsunst
                   hyprland
                   swww
                   user
@@ -86,7 +82,7 @@
               };
             }
           ];
-          specialArgs = { inherit pkgs-unst hyprland user; };
+          specialArgs = { inherit pkgsunst hyprland user; };
           system = user.system;
         };
       };
@@ -98,7 +94,7 @@
 
       devShells.${user.system}.default = devenv.lib.mkShell {
         inherit
-          pkgs-unst
+          pkgsunst
           hyprland
           swww
           user
@@ -108,11 +104,6 @@
           (
             { pkgks, config, ... }:
             {
-              packages = [ pkgs-unst.hello ];
-
-              enterShell = ''
-                hello
-              '';
             }
           )
         ];
