@@ -54,7 +54,11 @@
       ...
     }@inputs:
     let
-      pkgsunst = nixpkgs.legacyPackages.${user.system};
+      pkgs = import nixpkgs {
+        system = user.system;
+        config.allowUnfree = true;
+        config.cudaSupport = true;
+      };
       user = {
         hostname = "prouk";
         name = "prouk";
@@ -73,7 +77,7 @@
               home-manager.users.${user.name} = ./home/default.nix;
               home-manager.extraSpecialArgs = {
                 inherit
-                  pkgsunst
+                  pkgs
                   hyprland
                   swww
                   user
@@ -82,31 +86,9 @@
               };
             }
           ];
-          specialArgs = { inherit pkgsunst hyprland user; };
+          specialArgs = { inherit pkgs hyprland user; };
           system = user.system;
         };
-      };
-
-      packages.${user.system} = {
-        devenv-up = self.devShells.${user.system}.default.config.procfileScript;
-        devenv-test = self.devShells.${user.system}.default.config.test;
-      };
-
-      devShells.${user.system}.default = devenv.lib.mkShell {
-        inherit
-          pkgsunst
-          hyprland
-          swww
-          user
-          zen-browser
-          ;
-        modules = [
-          (
-            { pkgks, config, ... }:
-            {
-            }
-          )
-        ];
       };
 
       formatter.${user.system} = nixpkgs.legacyPackages.${user.system}.nixfmt-tree;

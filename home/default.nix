@@ -1,5 +1,5 @@
 {
-  pkgsunst,
+  pkgs,
   swww,
   zen-browser,
   user,
@@ -17,7 +17,7 @@
     ./modules/video.nix
   ];
 
-  home.packages = with pkgsunst; [
+  home.packages = with pkgs; [
     adwaita-icon-theme
     alsa-scarlett-gui
     android-tools

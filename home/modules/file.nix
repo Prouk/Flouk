@@ -1,9 +1,9 @@
-{ pkgsunst, ... }:
+{ pkgs, ... }:
 {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
-    package = pkgsunst.yazi;
+    package = pkgs.yazi;
     settings = {
       mgr = {
         show_hidden = true;
@@ -16,7 +16,7 @@
 
   xdg.portal = {
     enable = true;
-    extraPortals = with pkgsunst; [
+    extraPortals = with pkgs; [
       xdg-desktop-portal-termfilechooser
     ];
   };
@@ -29,7 +29,7 @@
     force = true;
     text = ''
       [filechooser]
-      cmd=${pkgsunst.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
+      cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
       default_dir=$HOME/Downloads
     '';
   };

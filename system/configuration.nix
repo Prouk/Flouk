@@ -1,4 +1,4 @@
-{ config, ... }:
+{ ... }:
 
 {
   imports = [
@@ -10,8 +10,6 @@
     "nix-command"
     "flakes"
   ];
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.cudaSupport = true;
 
   system.stateVersion = "24.11";
 }

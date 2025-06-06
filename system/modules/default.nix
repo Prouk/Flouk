@@ -1,4 +1,4 @@
-{ pkgsunst, ... }:
+{ pkgs, ... }:
 {
   imports = [
     ./boot.nix
@@ -12,7 +12,7 @@
     ./sound.nix
     ./users.nix
   ];
-  environment.systemPackages = with pkgsunst; [
+  environment.systemPackages = with pkgs; [
     fastfetch
     git
     tree

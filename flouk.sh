@@ -35,8 +35,8 @@ install_flake() {
     clear
     echo "Installing flake..."
     echo -e "${color[red]}From here, it is assumed that you have already installed NixOS and have a working NixOS configuration.
-    You MUST also have replaced the included configuration.nix and hardware-configuration.nix with your own.${color[reset]}"
-    sudo nixos-rebuild switch --flake ./ --accept-flake-config && hyprctl reload
+You MUST also have replaced the included configuration.nix and hardware-configuration.nix with your own.${color[reset]}"
+    sudo nixos-rebuild --impure switch --flake ./ --accept-flake-config && hyprctl reload
 }
 
 update_flake() {

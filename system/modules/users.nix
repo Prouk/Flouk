@@ -1,4 +1,4 @@
-{ user, pkgsunst, ... }:
+{ user, pkgs, ... }:
 {
   users.users.${user.name} = {
     isNormalUser = true;
@@ -7,6 +7,6 @@
       "networkmanager"
       "wheel"
     ];
-    shell = pkgsunst.zsh;
+    shell = pkgs.zsh;
   };
 }
