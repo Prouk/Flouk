@@ -99,7 +99,20 @@
 
       };
 
-      ./devShells
+      devShells.${user.system} = {
+        nix = devenv.lib.mkShell {
+          inherit inputs pkgs;
+          modules = [
+            ./devenv/nix.nix
+          ];
+        };
+        go = devenv.lib.mkShell {
+          inherit inputs pkgs;
+          modules = [
+            ./devenv/go.nix
+          ];
+        };
+      };
 
       formatter.${user.system} = nixpkgs.legacyPackages.${user.system}.nixfmt-tree;
     };
