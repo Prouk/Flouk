@@ -1,4 +1,4 @@
-theme = "kdt"
+theme = "kt"
 
 [editor.file-picker]
 hidden = false

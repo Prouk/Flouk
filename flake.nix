@@ -89,6 +89,17 @@
           specialArgs = { inherit pkgs hyprland user; };
           system = user.system;
         };
+
+      };
+      packages.${user.system} = {
+        devenv-up = self.devShells.${user.system}.default.config.procfileScript;
+        devenv-test = self.devShells.${user.system}.default.config.test;
+      };
+      devShells.${user.system}.default = devenv.lib.mkShell {
+        inherit inputs pkgs;
+        modules = [
+          ./devenv
+        ];
       };
 
       formatter.${user.system} = nixpkgs.legacyPackages.${user.system}.nixfmt-tree;
