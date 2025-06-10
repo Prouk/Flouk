@@ -6,6 +6,6 @@
   ];
 
   environment.variables = {
-    FLAKE_PATH = "~/nvme/projects/Flouk";
+    FLAKE_PATH = "/home/prouk/nvme/projects/Flouk";
   };
 }
