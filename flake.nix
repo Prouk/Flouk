@@ -86,7 +86,14 @@
               };
             }
           ];
-          specialArgs = { inherit pkgs hyprland user; };
+          specialArgs = {
+            inherit
+              pkgs
+              hyprland
+              self
+              user
+              ;
+          };
           system = user.system;
         };
 
