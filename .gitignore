@@ -1,4 +1,4 @@
 # IGNORE DEVENV AND DIRENV
 .devenv
-.divenv
+.direnv
 .envrc
