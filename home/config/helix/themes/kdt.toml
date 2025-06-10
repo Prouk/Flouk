@@ -1,4 +1,4 @@
 inherits = "kanagawa-dragon"
 
-"ui.background" = { bg = "#00000035" }
-"ui.gutter" = { bg = "#00000035" }
+"ui.background" = { bg = "transparent" }
+"ui.gutter" = { bg = "transparent" }
