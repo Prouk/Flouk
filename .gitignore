@@ -1,2 +1,3 @@
-# IGNORE DEVENV GENERATION FOLDER
-./.devenv
+# IGNORE DEVENV AND DIRENV
+./devenv
+.envrc
