@@ -39,7 +39,7 @@
     "on-click": "pwvucontrol",
   },
   "clock": {
-    "format": "{:%R %a %m/%d}",
+    "format": "{:%R %a %d/%m}",
     "tooltip-format": "{calendar}",
     "calendar": {
       "format": {

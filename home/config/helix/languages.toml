@@ -1,3 +1,10 @@
+[language-server.templ-lsp]
+command = "templ lsp"
+
+[[language]]
+name = "css"
+language-servers = ["vscode-css-language-server", "tailwind-ls"]
+
 [[language]]
 name = "nix"
 language-servers = ["nixd"]
