@@ -6,6 +6,7 @@
     ./gaming.nix
     ./greeter.nix
     ./locale.nix
+    ./mount.nix
     ./networking.nix
     ./nvidia.nix
     ./shell.nix
