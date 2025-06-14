@@ -9,7 +9,6 @@
   imports = [
     ./home.nix
     ./config.nix
-    ./modules/desktop.nix
     ./modules/dev.nix
     ./modules/file.nix
     ./modules/gaming.nix
@@ -20,6 +19,7 @@
 
   home.packages = with pkgs; [
     adwaita-icon-theme
+    ags
     alsa-scarlett-gui
     android-tools
     btop
