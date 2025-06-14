@@ -30,13 +30,15 @@ choices="Choose what you want to do:
   3)  Clean all but 2 lasts generations
   4)  Exit
   ( 1, 2, 3, default=1 )"
+$SCRIPT = $(readlink -f "$0")
+$FLAKE_PATH = $(dirname "$SCRIPT")
 
 install_flake() {
     clear
     echo "Installing flake..."
     echo -e "${color[red]}From here, it is assumed that you have already installed NixOS and have a working NixOS configuration.
 You MUST also have replaced the included configuration.nix and hardware-configuration.nix with your own.${color[reset]}"
-    sudo nixos-rebuild --impure switch --flake ./ --accept-flake-config && hyprctl reload
+    sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure -v && hyprctl reload
 }
 
 update_flake() {
@@ -50,7 +52,7 @@ collect_garbage() {
     echo "Cleaning generations..."
     sudo nix-env -p /nix/var/nix/profiles/system --delete-generations +2
     sudo nix-collect-garbage
-    sudo nixos-rebuild switch --flake ./ --accept-flake-config
+    sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config
 }
 
 menu() {

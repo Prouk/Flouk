@@ -1,5 +1,5 @@
 {
-  pkgs,
+  # pkgs,
   ags,
   ...
 }:
@@ -11,7 +11,7 @@
 
     configDir = null;
 
-    extraPackages = with pkgs; {
-    };
+    # extraPackages = with pkgs; {
+    # };
   };
 }
