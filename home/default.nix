@@ -9,6 +9,7 @@
   imports = [
     ./home.nix
     ./config.nix
+    ./modules/desktop.nix
     ./modules/dev.nix
     ./modules/file.nix
     ./modules/gaming.nix
@@ -33,9 +34,7 @@
     p7zip-rar
     rofi-wayland
     swww.packages.${user.system}.swww
-    # xfce.thunar
     vesktop
-    waybar
     wev
     zen-browser.packages.${user.system}.default
     zed-editor
