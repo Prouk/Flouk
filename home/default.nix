@@ -1,5 +1,5 @@
 {
-  pkgs,
+  pkgs-unst,
   swww,
   zen-browser,
   user,
@@ -17,7 +17,7 @@
     ./modules/video.nix
   ];
 
-  home.packages = with pkgs; [
+  home.packages = with pkgs-unst; [
     adwaita-icon-theme
     ags
     alsa-scarlett-gui

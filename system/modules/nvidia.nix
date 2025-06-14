@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs-unst, ... }:
 {
 
   boot.blacklistedKernelModules = [ "nouveau" ];
@@ -6,7 +6,7 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs-unst; [
       nvidia-vaapi-driver
     ];
   };
@@ -21,7 +21,7 @@
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
 
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs-unst; [
     ffmpeg-full
     nvtopPackages.nvidia
     glxinfo

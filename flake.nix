@@ -23,10 +23,6 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
-    ags = {
-      url = "github:aylur/ags";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     devenv = {
       url = "github:cachix/devenv";
     };
@@ -51,7 +47,6 @@
   outputs =
     {
       self,
-      ags,
       devenv,
       home-manager,
       hyprland,
@@ -61,7 +56,7 @@
       ...
     }@inputs:
     let
-      pkgs = import nixpkgs {
+      pkgs-unst = import nixpkgs {
         system = user.system;
         config.allowUnfree = true;
         config.cudaSupport = true;
@@ -84,8 +79,7 @@
               home-manager.users.${user.name} = ./home/default.nix;
               home-manager.extraSpecialArgs = {
                 inherit
-                  pkgs
-                  ags
+                  pkgs-unst
                   hyprland
                   swww
                   user
@@ -96,7 +90,7 @@
           ];
           specialArgs = {
             inherit
-              pkgs
+              pkgs-unst
               hyprland
               self
               user
@@ -109,19 +103,19 @@
 
       devShells.${user.system} = {
         nix = devenv.lib.mkShell {
-          inherit inputs pkgs;
+          inherit inputs pkgs-unst;
           modules = [
             ./devenv/nix.nix
           ];
         };
         go = devenv.lib.mkShell {
-          inherit inputs pkgs;
+          inherit inputs pkgs-unst;
           modules = [
             ./devenv/go.nix
           ];
         };
         ts = devenv.lib.mkShell {
-          inherit inputs pkgs;
+          inherit inputs pkgs-unst;
           modules = [
             ./devenv/ts.nix
           ];

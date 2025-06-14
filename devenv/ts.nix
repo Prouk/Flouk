@@ -1,6 +1,6 @@
-{ pkgs, ... }:
+{ pkgs-unst, ... }:
 {
-  packages = with pkgs; [
+  packages = with pkgs-unst; [
     typescript-language-server
   ];
 }
