@@ -11,5 +11,10 @@
     "flakes"
   ];
 
+  nixpkgs.config = {
+    cudaSupport = true;
+    allowUnfree = true;
+  };
+
   system.stateVersion = "24.11";
 }

@@ -101,21 +101,34 @@
 
       };
 
-      devShells.${user.system} = {
-        nix = devenv.lib.mkShell {
-          inherit inputs pkgs-unst;
+      devShells.${user.system} =
+      let
+        pkgs = pkgs-unst;
+      in
+      {
+      nix = devenv.lib.mkShell {
+          inherit
+            inputs
+            pkgs
+            ;
           modules = [
             ./devenv/nix.nix
           ];
         };
         go = devenv.lib.mkShell {
-          inherit inputs pkgs-unst;
+          inherit
+            inputs
+            pkgs
+            ;
           modules = [
             ./devenv/go.nix
           ];
         };
         ts = devenv.lib.mkShell {
-          inherit inputs pkgs-unst;
+          inherit
+            inputs
+            pkgs
+            ;
           modules = [
             ./devenv/ts.nix
           ];
