@@ -52,6 +52,7 @@
   outputs =
     {
       self,
+      ags,
       devenv,
       home-manager,
       hyprland,
@@ -85,6 +86,7 @@
               home-manager.extraSpecialArgs = {
                 inherit
                   pkgs-unst
+                  ags
                   hyprland
                   swww
                   user
