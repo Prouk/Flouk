@@ -15,7 +15,6 @@
     ./modules/shell.nix
     ./modules/theme.nix
     ./modules/video.nix
-    ./modules/widget.nix
   ];
 
   home.packages = with pkgs-unst; [
