@@ -23,11 +23,10 @@
     nixpkgs = {
       url = "github:nixos/nixpkgs?ref=nixos-unstable";
     };
-    ags = {
-      url = "github:aylur/ags";
+    quickshell = {
+      url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    
     devenv = {
       url = "github:cachix/devenv";
     };
@@ -52,11 +51,11 @@
   outputs =
     {
       self,
-      ags,
       devenv,
       home-manager,
       hyprland,
       nixpkgs,
+      quickshell,
       swww,
       zen-browser,
       ...
@@ -86,8 +85,8 @@
               home-manager.extraSpecialArgs = {
                 inherit
                   pkgs-unst
-                  ags
                   hyprland
+                  quickshell
                   swww
                   user
                   zen-browser
@@ -138,6 +137,15 @@
             ;
           modules = [
             ./devenv/ts.nix
+          ];
+        };
+        qml = devenv.lib.mkShell {
+          inherit
+            inputs
+            pkgs
+            ;
+          modules = [
+            ./devenv/qml.nix
           ];
         };
       };

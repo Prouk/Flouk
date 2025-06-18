@@ -1,5 +1,6 @@
 {
   pkgs-unst,
+  quickshell,
   swww,
   zen-browser,
   user,
@@ -30,6 +31,7 @@
     kitty
     nano
     nerd-fonts.symbols-only
+    quickshell.packages.${user.system}.default
     p7zip-rar
     rofi-wayland
     swww.packages.${user.system}.swww
