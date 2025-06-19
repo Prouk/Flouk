@@ -121,6 +121,15 @@
             ./devenv/nix.nix
           ];
         };
+        git = devenv.lib.mkShell {
+          inherit
+            inputs
+            pkgs
+            ;
+          modules = [
+            ./devenv/git.nix
+          ];
+        };
         go = devenv.lib.mkShell {
           inherit
             inputs
