@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
   packages = with pkgs; [
-    qmlls
+    # qmlls
   ];
 }

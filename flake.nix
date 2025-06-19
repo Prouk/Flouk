@@ -130,15 +130,6 @@
             ./devenv/go.nix
           ];
         };
-        ts = devenv.lib.mkShell {
-          inherit
-            inputs
-            pkgs
-            ;
-          modules = [
-            ./devenv/ts.nix
-          ];
-        };
         qml = devenv.lib.mkShell {
           inherit
             inputs
@@ -146,6 +137,15 @@
             ;
           modules = [
             ./devenv/qml.nix
+          ];
+        };
+        web = devenv.lib.mkShell {
+          inherit
+            inputs
+            pkgs
+            ;
+          modules = [
+            .devenv/web.nix
           ];
         };
       };
