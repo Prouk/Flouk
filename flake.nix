@@ -145,7 +145,7 @@
             pkgs
             ;
           modules = [
-            .devenv/web.nix
+            ./devenv/web.nix
           ];
         };
       };
