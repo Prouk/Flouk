@@ -25,7 +25,6 @@
     btop
     dunst
     file
-    firefox
     fragments
     helix
     hyprshot
