@@ -763,11 +763,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1752322036,
-        "narHash": "sha256-10tAg2tv8GeSiKi56BrbWnbqCDz5IFrYRKxopryjR2w=",
+        "lastModified": 1752327195,
+        "narHash": "sha256-BheHc2VUG1iO/aKzr5tY86QAAx5/LUxP2pl3uhX/CAg=",
         "owner": "Prouk",
         "repo": "zen-browser-flake",
-        "rev": "6db0002b6c060525f5149bdc256bd57e7121d20a",
+        "rev": "53824a2f026d909adf055db4392f03dc10245dee",
         "type": "github"
       },
       "original": {
