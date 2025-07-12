@@ -25,16 +25,20 @@
     btop
     dunst
     file
+    firefox
     fragments
     helix
     hyprshot
     kitty
+    lazygit
     nano
     nerd-fonts.symbols-only
+    nix-output-monitor
     quickshell.packages.${user.system}.default
     p7zip-rar
     rofi-wayland
     swww.packages.${user.system}.swww
+    thunderbird
     vesktop
     wev
     zen-browser.packages.${user.system}.default

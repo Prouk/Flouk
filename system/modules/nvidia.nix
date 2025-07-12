@@ -15,8 +15,8 @@
     modesetting.enable = true;
     powerManagement.enable = false;
     powerManagement.finegrained = false;
-    # open = true; # do what you want
-    open = false;
+    open = true;
+    # open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
@@ -25,6 +25,7 @@
     ffmpeg-full
     nvtopPackages.nvidia
     glxinfo
+    libva-utils
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];

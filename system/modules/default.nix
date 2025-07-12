@@ -19,4 +19,5 @@
     tree
   ];
 
+  virtualisation.docker.enable = true;
 }

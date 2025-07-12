@@ -1,9 +1,5 @@
 [language-server.nixd]
 command = "nixd"
-[language-server.nixd.nixpkgs]
-expr = "import (builtins.getFlake \"/etc/nixos\").inputs.nixpkgs { }"
-[language-server.nixd.options.nixos]
-expr = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.<HOSTNAME>.options"
 
 [language-server.templ-lsp]
 command = "templ lsp"
@@ -14,4 +10,4 @@ language-servers = ["vscode-css-language-server", "tailwind-ls"]
 
 [[language]]
 name = "nix"
-language-servers = ["nixd"]
+language-servers = ["nil", "nixd"]

@@ -4,6 +4,7 @@
     isNormalUser = true;
     description = user.name;
     extraGroups = [
+      "docker"
       "networkmanager"
       "wheel"
     ];
