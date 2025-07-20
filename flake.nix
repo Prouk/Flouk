@@ -64,7 +64,7 @@
       pkgs-unst = import nixpkgs {
         system = user.system;
         config.allowUnfree = true;
-        config.cudaSupport = true;
+        cudaSupport = true;
       };
       user = {
         hostname = "prouk";
@@ -137,6 +137,15 @@
             ;
           modules = [
             ./devenv/go.nix
+          ];
+        };
+        markdown = devenv.lib.mkShell {
+          inherit
+            inputs
+            pkgs
+            ;
+          modules = [
+            ./devenv/markdown.nix
           ];
         };
         qml = devenv.lib.mkShell {

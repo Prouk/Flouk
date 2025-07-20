@@ -23,20 +23,25 @@
     alsa-scarlett-gui
     android-tools
     btop
+    digikam
     dunst
     file
     fragments
     helix
     hyprshot
+    jmtpfs
     kitty
     lazygit
     nano
+    miru
     nerd-fonts.symbols-only
     nix-output-monitor
     quickshell.packages.${user.system}.default
     p7zip-rar
+    progress
     rofi-wayland
     swww.packages.${user.system}.swww
+    teamspeak6-client
     thunderbird
     vesktop
     wev

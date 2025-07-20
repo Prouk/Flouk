@@ -24,6 +24,7 @@
   environment.systemPackages = with pkgs-unst; [
     ffmpeg-full
     nvtopPackages.nvidia
+    cudatoolkit
     glxinfo
     libva-utils
   ];
