@@ -42,7 +42,8 @@ You MUST also have replaced the included configuration.nix and hardware-configur
     then
         sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure --quiet && hyprctl reload
     else
-        sudo nom nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure --log-format internal-json -v |& nom --json && hyprctl reload
+        sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure --log-format internal-json -v |& sudo nom --json
+        hyprctl reload
     fi
 }
 
