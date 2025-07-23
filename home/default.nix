@@ -2,7 +2,6 @@
   pkgs-unst,
   quickshell,
   swww,
-  zen-browser,
   user,
   ...
 }:
@@ -13,39 +12,20 @@
     ./modules/dev.nix
     ./modules/file.nix
     ./modules/gaming.nix
+    ./modules/internet.nix
     ./modules/shell.nix
     ./modules/theme.nix
+    ./modules/utility.nix
     ./modules/video.nix
   ];
 
   home.packages = with pkgs-unst; [
-    adwaita-icon-theme
-    alsa-scarlett-gui
-    android-tools
-    btop
+    miru
     digikam
     dunst
-    file
-    fragments
-    helix
-    hyprshot
-    jmtpfs
-    kitty
     lazygit
-    nano
-    miru
-    nerd-fonts.symbols-only
-    nix-output-monitor
     quickshell.packages.${user.system}.default
-    p7zip-rar
-    progress
     rofi-wayland
     swww.packages.${user.system}.swww
-    teamspeak6-client
-    thunderbird
-    vesktop
-    wev
-    zen-browser.packages.${user.system}.default
-    zed-editor
   ];
 }

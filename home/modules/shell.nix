@@ -10,4 +10,8 @@
     };
     package = pkgs-unst.zsh;
   };
+
+  home.packages = with pkgs-unst; [
+    kitty
+  ];
 }

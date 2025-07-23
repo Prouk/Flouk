@@ -112,7 +112,7 @@
         pkgs = pkgs-unst;
       in
       {
-      nix = devenv.lib.mkShell {
+        nix = devenv.lib.mkShell {
           inherit
             inputs
             pkgs

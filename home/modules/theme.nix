@@ -21,4 +21,9 @@
       name = "Nordzy-Dark";
     };
   };
+
+  home.packages = with pkgs-unst; [
+    adwaita-icon-theme
+    nerd-fonts.symbols-only
+  ];
 }

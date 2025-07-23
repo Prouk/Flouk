@@ -20,4 +20,10 @@
       ];
     };
   };
+
+  home.packages = with pkgs-unst; [
+    file
+    jmtpfs
+    p7zip-rar
+  ];
 }
