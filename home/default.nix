@@ -24,6 +24,7 @@
     digikam
     dunst
     lazygit
+    obsidian
     quickshell.packages.${user.system}.default
     rofi-wayland
     swww.packages.${user.system}.swww

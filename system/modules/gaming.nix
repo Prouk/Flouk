@@ -1,18 +1,18 @@
-{ ... }:
+{ pkgs-unst, ... }:
 {
   programs.steam = {
     enable = true;
-    remotePlay.openFirewall = true;
-    dedicatedServer.openFirewall = true;
-    localNetworkGameTransfers.openFirewall = true;
-    gamescopeSession.enable = true;
-  };
-
-  programs.gamemode = {
-    enable = true;
+    package = pkgs-unst.steam;
+    protontricks = {
+      enable = true;
+      package = pkgs-unst.protontricks;
+    };
+    
   };
 
   programs.gamescope = {
     enable = true;
+    package = pkgs-unst.gamescope;
+    # capSysNice = true; # Permission error when true
   };
 }

@@ -3,6 +3,7 @@
   imports = [
     ./boot.nix
     ./desktop.nix
+    ./hardware.nix
     ./gaming.nix
     ./greeter.nix
     ./locale.nix

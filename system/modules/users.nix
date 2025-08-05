@@ -10,4 +10,10 @@
     ];
     shell = pkgs-unst.zsh;
   };
+
+  security.polkit.enable = true;
+
+  environment.systemPackages = with pkgs-unst; [
+    polkit_gnome
+  ];
 }

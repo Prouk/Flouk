@@ -1,12 +1,17 @@
 { pkgs-unst, ... }:
 {
   home.packages = with pkgs-unst; [
-    lutris
-    protontricks
     protonup
-    umu-launcher
-    vulkan-loader
-    vulkan-tools
-    winetricks
   ];
+
+  programs.lutris = {
+    enable = true;
+    package = pkgs-unst.lutris;
+    extraPackages = with pkgs-unst; [
+      mangohud
+      umu-launcher
+      vulkan-tools
+      vulkan-loader      
+    ];
+  };  
 }
