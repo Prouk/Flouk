@@ -13,6 +13,5 @@
   programs.gamescope = {
     enable = true;
     package = pkgs-unst.gamescope;
-    # capSysNice = true; # Permission error when true
   };
 }

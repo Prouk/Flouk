@@ -20,7 +20,6 @@
   ];
 
   home.packages = with pkgs-unst; [
-    miru
     digikam
     dunst
     lazygit

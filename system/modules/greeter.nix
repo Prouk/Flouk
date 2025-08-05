@@ -2,15 +2,14 @@
 {
   services = {
     xserver = {
+      enable = true;
       xkb = {
-        layout = "fr";
-        variant = "azerty";
+        layout = "us";
       };
     };
     displayManager.sddm = {
       enable = true;
-      # wayland.enable = true;
+      wayland.enable = true; # May be causing sddm login problem with hyprland
     };
   };
-  services.xserver.enable = true;
 }

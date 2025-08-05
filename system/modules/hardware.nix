@@ -1,11 +1,12 @@
-{ pkgs-unst, ... }:
+{ ... }:
 {
   hardware.wooting = {
     enable = true;
   };
 
-  environment.systemPackages = with pkgs-unst; [
-    wootility
-    wooting-udev-rules
-  ];
+  # if hardware.wooting no worky
+  # environment.systemPackages = with pkgs-unst; [
+    # wootility
+    # wooting-udev-rules
+  # ];
 }

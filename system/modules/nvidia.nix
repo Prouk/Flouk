@@ -1,14 +1,8 @@
 { config, pkgs-unst, ... }:
 {
-
-  boot.blacklistedKernelModules = [ "nouveau" ];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    extraPackages = with pkgs-unst; [
-      nvidia-vaapi-driver
-    ];
   };
 
   hardware.nvidia = {
@@ -22,11 +16,9 @@
   };
 
   environment.systemPackages = with pkgs-unst; [
-    ffmpeg-full
     nvtopPackages.nvidia
     cudatoolkit
-    glxinfo
-    libva-utils
+    ffmpeg-full
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];

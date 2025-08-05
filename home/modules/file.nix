@@ -5,9 +5,8 @@
     enableZshIntegration = true;
     package = pkgs-unst.yazi;
     plugins = {
-     inherit (pkgs-unst.yaziPlugins) mount;
-    }
-    ;
+      inherit (pkgs-unst.yaziPlugins) mount;
+    };
     settings = {
       mgr = {
         show_hidden = true;

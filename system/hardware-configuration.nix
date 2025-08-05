@@ -21,15 +21,15 @@
     "usbhid"
     "sd_mod"
   ];
-  boot.initrd.kernelModules = [ ];
+
   boot.kernelModules = [
     "kvm-amd"
-    "nvidia"
-    "nvidia_modeset"
-    "nvidia_uvm"
-    "nvidia_drm"
   ];
-  boot.extraModulePackages = [ ];
+
+  boot.kernelParams = [
+    "quiet"
+    "splash"
+  ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/480e1cbf-f5c5-46af-8926-a9a1ee9aaa44";
