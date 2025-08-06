@@ -40,9 +40,9 @@ install_flake() {
 You MUST also have replaced the included configuration.nix and hardware-configuration.nix with your own.${color[reset]}"
     if ! nom --version >/dev/null 2>&1
     then
-        sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure --quiet && hyprctl reload
+        sudo nixos-rebuild switch --flake $FLAKE_PATH --impure --quiet && hyprctl reload
     else
-        sudo nixos-rebuild switch --flake $FLAKE_PATH --accept-flake-config --impure --log-format internal-json -v |& sudo nom --json
+        sudo nixos-rebuild switch --flake $FLAKE_PATH --impure --log-format internal-json -v |& sudo nom --json
         hyprctl reload
     fi
 }
@@ -50,7 +50,7 @@ You MUST also have replaced the included configuration.nix and hardware-configur
 update_flake() {
     clear
     echo "Updating flake..."
-    nix flake update --accept-flake-config
+    nix flake update
 }
 
 collect_garbage() {

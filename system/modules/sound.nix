@@ -6,6 +6,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    package = pkgs-unst.pipewire;
   };
 
   environment.systemPackages = with pkgs-unst; [

@@ -19,6 +19,7 @@
     nvtopPackages.nvidia
     cudatoolkit
     ffmpeg-full
+    vulkan-tool
   ];
 
   services.xserver.videoDrivers = [ "nvidia" ];

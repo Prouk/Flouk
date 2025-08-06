@@ -9,7 +9,7 @@
     ./locale.nix
     ./mount.nix
     ./networking.nix
-    ./nvidia.nix
+    ./video.nix
     ./shell.nix
     ./sound.nix
     ./users.nix

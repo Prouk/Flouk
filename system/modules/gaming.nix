@@ -7,7 +7,6 @@
       enable = true;
       package = pkgs-unst.protontricks;
     };
-    
   };
 
   programs.gamescope = {
